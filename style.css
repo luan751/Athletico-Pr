@@ -1,0 +1,143 @@
+/* ==========================================
+   Configurações Gerais e Cores do Athletico
+   ========================================== */
+   :root {
+    --cor-fundo-topo: #b30012;  /* Vermelho do Furacão */
+    --cor-fundo-base: #0a0a0a;  /* Preto profundo */
+    --cor-fundo-card: rgba(20, 20, 20, 0.85); /* Caixas escuras semi-transparentes */
+    --cor-primaria: #e50019;    
+    --cor-texto: #ffffff;       
+    --cor-texto-mutado: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Degradê do Vermelho (topo) para o Preto (baixo) */
+    background: linear-gradient(to bottom, var(--cor-fundo-topo), var(--cor-fundo-base));
+    background-attachment: fixed; /* Mantém o degradê fixo na tela */
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    background: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(229,0,25,0.4));
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+header h1 {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: var(--cor-fundo-card);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--cor-primaria);
+    border-radius: 4px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+main, aside {
+    background-color: var(--cor-fundo-card);
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 4px solid var(--cor-primaria);
+    backdrop-filter: blur(5px);
+}
+
+h2, h3 {
+    border-left: 4px solid var(--cor-primaria);
+    padding-left: 10px;
+    margin: 15px 0;
+}
+
+p, ul, ol {
+    color: var(--cor-texto-mutado);
+    margin-bottom: 15px;
+}
+
+aside article {
+    background-color: rgba(45, 45, 45, 0.6);
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    border-left: 3px solid var(--cor-primaria);
+}
+
+/* ==========================================
+   Imagens e Bloco do Escudo Quadrado Branco
+   ========================================== */
+.galeria-imagens {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.galeria-imagens picture {
+    flex: 1;
+    min-width: 250px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Fundo branco e quadrado exclusivo para o bloco do escudo */
+.fundo-escudo {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 0px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fundo-escudo img {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+}
